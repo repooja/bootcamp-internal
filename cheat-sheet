@@ -1,6 +1,9 @@
 -------------------------------------
 Docker commands
 
+npm install
+npm 
+
 docker build . -t poojadocker912/internal:v1.0.0
 docker push poojadocker912/internal:v1.0.0
 docker run -d -p 8082:8082 poojadocker912/internal:v1.0.0
