@@ -1,7 +1,7 @@
 pipeline{
     agent any
     environment {
-        Image_name = "gcr.io/dtc-user7/internal-image:V_${BUILD_NUMBER}"
+        Image_name = "gcr.io/dtc-user7/internal-image:V_${BUILD_ID}"
     }
     stages{
         stage('dependancy versions'){
@@ -21,7 +21,8 @@ pipeline{
         stage('git test'){
             steps{
                 sh '''
-                    echo "test internal code ..!"
+                    ls -a
+                    echo "install dependencies and test internal code ..!"
                     npm install
                     npm test
                 ''' 
