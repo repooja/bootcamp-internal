@@ -17,7 +17,7 @@ spec:
     spec:
       containers:
       - name: events-data
-        image: poojadocker912/internal:v1.0.0
+        image: $IMAGE
         env:
         - name: PORT
           value: "8080"
