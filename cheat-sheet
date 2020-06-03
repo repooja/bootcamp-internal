@@ -31,3 +31,4 @@ kubectl apply -f kube-config-external.yaml
 kubectl get services
 kubectl get deployments
 kubectl get pods
+kubectl get namespaces
