@@ -41,7 +41,7 @@ pipeline{
             steps{
                 sh '''
                     gcloud container clusters get-credentials cluster-1 --zone us-central1-c --project dtc-user7
-                    kubectl set image deployment/events-data events-data=${Image_name} --namespace=development
+                    kubectl set image deployment/events-data events-data=${Image_name}
                 ''' 
             }    
         }  
