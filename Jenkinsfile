@@ -1,4 +1,4 @@
-def ProjectId="dtc-user7"
+def ProjectId="dtc-user5"
 pipeline{
     agent any
     environment {
@@ -16,7 +16,7 @@ pipeline{
         }
         stage('git checkout'){
             steps{
-                git 'https://github.com/dnizam/bootcamp-internal.git'
+                    git 'https://github.com/dnizam/bootcamp-internal.git'
             }    
         }
         stage('git test'){
@@ -41,7 +41,7 @@ pipeline{
         stage('deploy'){
             steps{
                 sh """
-                    gcloud container clusters get-credentials cluster-1 --zone us-central1-c --project ${ProjectId}
+                    gcloud container clusters get-credentials user5-kube-cluster --zone us-central1-c --project dtc-user5
                     kubectl set image deployment/events-data events-data=${Image_name}
                 """
             }    
